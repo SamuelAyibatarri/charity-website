@@ -1,0 +1,967 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+:root {
+    --background-color: #FFFFFF;
+    --color1: #F0F3F6;
+    --color2: #272727;
+    --color3: #0E6248;
+    --color4: #7398B3;
+    --color5: #FBF8F6;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Bricolage Grotesque';
+}
+
+header, section, footer {
+  padding: 0 150px;
+}
+
+.header a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--background-color);
+  }
+  
+
+header {
+    height: 100vh;
+    display: flex;
+    padding: 0 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/img-1.png'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+  
+
+.header {
+  position: absolute;
+  display: flex;
+  margin: 0 250px;
+  justify-content: center;
+  gap: 3rem;
+  width: auto;
+  height: auto;
+  padding: 25px 0;
+  top: 0;
+}
+
+.header-open {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.header-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--background-color);
+  align-self: center;
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  line-height: 3rem;
+  min-width: 500px;
+  text-align: center;
+  margin: .5rem;
+}
+
+.side-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 70vw;
+  height: 100vh;
+  background: rgba(14,98,72,0.5);
+  background-blend-mode: normal;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+}
+
+.side-menu nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.side-menu nav a {
+  color: var(--background-color);
+  font-family: "Bricolage Grotesque";
+  color: var(--background-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.close-icon {
+  position: fixed;
+  right: 50px;
+  top: 50px;
+}
+
+.header-undertext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  min-width: 100%;
+  height: 150px;
+  text-align: center;
+  background-color: var(--color5);
+}
+
+.header-undertext p {
+  max-width: 800px;
+}
+
+.b1 {
+  background-color: var(--color3);
+  color: var(--background-color);
+  border: 0;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  font-family: 'Bricolage Grotesque';
+}
+
+.b2 {
+  background-color: rgba(255,255,255,0.85);
+  color: var(--color3);
+  border: 0;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  font-family: 'Bricolage Grotesque';
+}
+
+
+.share-button {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--color3);
+    color: var(--background-color);
+    height: 32px;
+    width: 96px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.mission-container-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 3.5rem;
+  background-color: var(--color5);
+  width: 900px;
+  height: 128px;
+  border-radius: 10px;
+}
+
+.stats div h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.stats div p {
+  font-size: 16px;
+}
+
+.missions-container {
+  min-height: 600px;
+  margin: 120px 20px;
+  max-width: 900px;
+}
+
+.t1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.t1 p {
+  max-width: 700px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.t1 button {
+  text-align: center;
+  background-color: var(--color3);
+  color: var(--background-color);
+  border: 0;
+  height: 40px;
+  width: auto;
+  border-radius: 5px;
+  font-family: 'Bricolage Grotesque';
+  font-size: 16px;
+  padding: 5px 15px;
+}
+
+.missions-container .c1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 5rem 0;
+}
+
+.missions-container div h-3 {
+  color: var(--color3);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.missions-container div h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.t2 {
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  margin: 20px 20px;
+}
+
+.t2 div {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.t2 div p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.t2 button {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--color3);
+  color: var(--background-color);
+  font-family: 'Bricolage Grotesque';
+  border: 0;
+  margin: 20px;
+}
+
+.img-1 {
+  position: relative;
+  top: -20px;
+  right: -20px;
+}
+
+.carousel{
+  width: 100%;
+  margin: 4rem 0;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slides {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.carousel-slides img {
+  min-width: 500px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-img {
+  margin: 10px;
+}
+
+.donate-sect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.donate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  height: auto;
+  gap: 5rem;
+}
+
+.donate-text {
+  display: flex;
+  max-width: 400px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.donate-text h2 {
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.donate-text p {
+  line-height: 22px;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.payment-form {
+  width: 350px;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--color5);
+  background: var(--background-color);
+  background-blend-mode: normal;
+  box-shadow: 0px 0px 20px rgba(16,114,83,0.16);
+  padding: 25px;
+}
+
+label {
+  padding: 5px;
+  font-weight: 700px;
+  font-size: 1rem;
+}
+
+input {
+  height: 40px;
+  width: 100%;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  padding: 10px;
+}
+
+.next {
+  height: 500px;
+}
+
+.b3 {
+  background-color: var(--color3);
+  color: var(--background-color);
+  border: 0;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  font-family: 'Bricolage Grotesque';
+}
+
+.resources {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.resources-container {
+  min-height: 400px;
+  margin: 120px 20px;
+  max-width: 900px;
+}
+
+.resources-container .c1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 2rem 0;
+}
+
+.resources-container div h-3 {
+  color: var(--color3);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.resources-container div h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.t3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+}
+
+.t3 div {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.t3 div p {
+  margin: 5px 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.t3 button {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--color3);
+  color: var(--background-color);
+  font-family: 'Bricolage Grotesque';
+  border: 0;
+  margin: 5px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 900px;
+  width: 100%;
+  min-height: 200px;
+  padding: 30px;
+  border-radius: 8px;
+  background: var(--color3);
+  background-blend-mode: normal;
+}
+
+.subscribe-form h3 {
+  color: var(--background-color);
+  font-family: "Bricolage Grotesque";
+  font-size: 24px;
+  font-weight: 400;
+  margin: 5px;
+  text-align: center;
+}
+
+.subscribe-form p {
+  color: var(--background-color);
+  font-family: "Bricolage Grotesque";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  margin: 5px;
+}
+
+.subscribe-form div form {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 10px;
+}
+
+.subscribe-form div form input {
+  grid-column: 1;
+  margin: 0;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #dddddd;
+  background: var(--color5);
+  background-blend-mode: normal;
+}
+
+.subscribe-form div form .input-btn {
+  grid-column: 2;
+  border-radius: 0 5px 5px 0;
+  height: 40px;
+  background: rgba(255,255,255,0.85);
+  background-blend-mode: normal;
+  color: #0e6248;
+  font-family: "Bricolage Grotesque";
+  font-size: 1rem;
+  font-weight: 700
+}
+
+#e1 {
+  font-family: "Bricolage Grotesque";
+}
+footer {
+    background-color: var(--color2);
+    height: 200px;
+    width: 100%;
+    padding: 50px 250px;
+    margin-top: 5rem;
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.s1 {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  flex: auto;
+  text-align: left;
+  height: 100%;
+}
+
+.s1 img {
+  width: 100px;
+  height: 50px;
+}
+
+.s1 p {
+  color: var(--background-color);
+  font-family: "Bricolage Grotesque";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.s1 div {
+  display: flex;
+  flex-direction: row;
+  width: 50px;
+  justify-content: space-between;
+}
+
+.s1 div img {
+  color: red;
+  width: 10px;
+  height: 10px;
+}
+
+.s2 {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+}
+
+.s2 p {
+  width: 170px;
+  color: var(--background-color);
+  font-family: "Bricolage Grotesque";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: right;
+  line-height: 20px;
+}
+
+/**Media Queries**/
+
+@media(max-width: 1000px) {
+  header, section, footer {
+    padding: 0 150px;
+  }
+
+  .header-open {
+    display: flex;
+    margin: 0 3rem;
+    padding: 2rem 2rem;
+  }
+
+  .header-open .open-menu {
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 25px;
+  }
+
+  .header {
+    display: none;
+  }
+  
+
+  .missions-container .c1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5rem 0;
+  }
+
+  .mission-container div {
+    width: 100%;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: repeat(1fr, 2);
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 2.5rem;
+    background-color: var(--color5);
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  #s1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #s2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #s3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #s4 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .t1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .t1 button {
+    display: none;
+  }
+
+  .t1 p {
+    width: auto;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .donate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    gap: 50px;
+    height: auto;
+  }
+
+  .resources-container .c1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+  }
+
+  footer {
+    background-color: var(--color2);
+    min-height: 200px;
+    width: 100%;
+    padding: 50px 150px;
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 800px) {
+    header, section, footer {
+    padding: 0 50px;
+  }
+
+  .header-text h1 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    min-width: 350px;
+    text-align: center;
+    margin: .5rem;
+  }
+
+  .header-undertext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    line-height: 1rem;
+    min-width: 90%;
+    min-height: 90px;
+    text-align: center;
+    background-color: var(--color5);
+  }
+
+  .header-undertext p {
+    min-width: 350px;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: repeat(1fr, 2);
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 2.5rem;
+    background-color: var(--color5);
+    min-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  #s1 {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  #s2 {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  #s3 {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  #s4 {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .donate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 350px;
+    gap: 50px;
+    height: auto;
+  }
+
+  .donate-text h2 {
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.donate-text p {
+  display: none;
+}
+
+  .subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 300px;
+  width: 100%;
+  min-height: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  background: var(--color3);
+  background-blend-mode: normal;
+}
+
+.subscribe-form h3 {
+  color: var(--background-color);
+  font-family: "Bricolage Grotesque";
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 5px;
+  text-align: center;
+}
+
+.subscribe-form p {
+  color: var(--background-color);
+  font-family: "Bricolage Grotesque";
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  margin: 5px;
+}
+
+.subscribe-form div form {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 10px;
+}
+
+.subscribe-form div form input {
+  grid-column: 1;
+  margin: 0;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #dddddd;
+  background: var(--color5);
+  background-blend-mode: normal;
+}
+
+.payment-form {
+  width: 300px;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--color5);
+  background: var(--background-color);
+  background-blend-mode: normal;
+  box-shadow: 0px 0px 20px rgba(16,114,83,0.16);
+  padding: 25px;
+}
+
+  footer {
+    background-color: var(--color2);
+    min-height: auto;
+    height: 200px;
+    width: 100%;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer div {
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+  }
+
+  .s1 {
+  display: flex;
+  grid-column: 1;
+  gap: 5px;
+  flex-direction: column;
+  flex: auto;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+}
+
+.s1 img {
+  width: 100px;
+  height: 50px;
+}
+
+.s1 p {
+  color: var(--background-color);
+  font-family: "Bricolage Grotesque";
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.s1 div {
+  display: flex;
+  flex-direction: row;
+  width: 50px;
+  justify-content: space-between;
+}
+
+.s2 {
+  display: flex;
+  grid-column: 2;
+  flex-direction: row-reverse;
+  height: 100%;
+  width: 170px;
+  padding: 0;
+}
+
+.s2 p {
+  min-width: auto;
+  color: var(--background-color);
+  font-family: "Bricolage Grotesque";
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
+  line-height: 14px;
+}
+
+.t1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.t1 p {
+  min-width: 300px;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.b1 {
+  background-color: var(--color3);
+  color: var(--background-color);
+  border: 0;
+  height: 40px;
+  width: auto;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Bricolage Grotesque';
+}
+
+.b2 {
+  background-color: rgba(255,255,255,0.85);
+  color: var(--color3);
+  border: 0;
+  height: 40px;
+  padding: 10px;
+  width: auto;
+  border-radius: 5px;
+  font-family: 'Bricolage Grotesque';
+}
+}
+
